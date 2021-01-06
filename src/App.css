@@ -1,38 +1,107 @@
 .App {
-  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Form {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Field {
   display: flex;
   flex-direction: column;
+  width: 50%;
+}
+
+.FieldLabel {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.FieldInput {
+  height: 50px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  padding: 20px 10px;
+  border: 2px solid black;
+  border-radius: 9px;
+}
+
+.Button {
+  cursor: pointer;
+  height: 50px;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 9px;
+  width: 20%;
+  transition: 1s;
+}
+
+.Button:hover,
+.Button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.Table {
+  width: 100%;
+}
+
+.TableBody {
+  border-radius: 9px;
+  box-shadow: 0 0 0 2px black;
+  width: 100%;
+}
+
+th {
+  width: calc(100% / 3);
+  height: 50px;
+  font-weight: 500;
+}
+
+td {
+  text-align: center;
+  height: 50px;
+}
+
+.Action {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.ButtonEddit {
+  width: 15px;
+  cursor: pointer;
+  border: none;
+  height: 15px;
+  background-color: white;
+  background-image: url('./assets/pencil.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ButtonDelete {
+  width: 15px;
+  cursor: pointer;
+  border: none;
+  height: 15px;
+  background-color: white;
+  background-image: url('./assets/cross.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
 }
