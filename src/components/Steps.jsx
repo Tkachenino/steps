@@ -11,7 +11,6 @@ const Steps = () => {
     {date: '01.01.2020', range: 23, id: nanoid()},
   ]);
 
-  const [isEdditMode, setEdditMode] = useState(false);
   const [edditAction, setEdditAction] = useState();
 
   const deleteDate = (id) => {
@@ -20,9 +19,7 @@ const Steps = () => {
   }
 
   const edditDate = (id) => {
-    debugger;
     const action = list.find(item => item.id === id);
-    setEdditMode(true);
     setEdditAction(action);
 }
 
@@ -39,7 +36,7 @@ const Steps = () => {
 
   return (
     <div className='App'>
-      <Form isEdditMode={isEdditMode} edditAction={edditAction} onSubmitHandler={addAction}/>
+      <Form edditAction={edditAction} onSubmitHandler={addAction}/>
       <List list={list} onButtonDeleteHandler={deleteDate} onButtonEdditHandler={edditDate}/>
     </div>
   )

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const List = ({list, onButtonDeleteHandler, onButtonEdditHandler}) => {
   return (
     <table className='Table'>
@@ -30,5 +32,15 @@ const List = ({list, onButtonDeleteHandler, onButtonEdditHandler}) => {
     </table>
   )
 };
+
+List.propTypes = {
+  list: PropTypes.arrayOf(PropTypes.shape({
+    date: PropTypes.string,
+    range: PropTypes.number,
+    id: PropTypes.string,
+  })),
+  onButtonDeleteHandler: PropTypes.func,
+  onButtonEdditHandler: PropTypes.func
+}
 
 export default List;

@@ -75,6 +75,7 @@ td {
 }
 
 .ButtonEddit {
+  outline: none;
   width: 15px;
   cursor: pointer;
   border: none;
@@ -86,6 +87,7 @@ td {
 }
 
 .ButtonDelete {
+  outline: none;
   width: 15px;
   cursor: pointer;
   border: none;
