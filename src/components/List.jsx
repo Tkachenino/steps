@@ -36,7 +36,7 @@ const List = ({list, onButtonDeleteHandler, onButtonEdditHandler}) => {
 List.propTypes = {
   list: PropTypes.arrayOf(PropTypes.shape({
     date: PropTypes.string,
-    range: PropTypes.number,
+    range: PropTypes.string,
     id: PropTypes.string,
   })),
   onButtonDeleteHandler: PropTypes.func,
