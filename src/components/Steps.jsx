@@ -11,7 +11,7 @@ const Steps = () => {
     {date: '01.01.2020', range: 23, id: nanoid()},
   ]);
 
-  const [edditAction, setEdditAction] = useState();
+  const [edditAction, setEdditAction] = useState({date: '', range: ''});
 
   const deleteDate = (id) => {
       const newList = list.filter(item => item.id !== id);
@@ -20,7 +20,7 @@ const Steps = () => {
 
   const edditDate = (id) => {
     const action = list.find(item => item.id === id);
-    setEdditAction(action);
+    setEdditAction({...action, range: action.range.toString()});
 }
 
 

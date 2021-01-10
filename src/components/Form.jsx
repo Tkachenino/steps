@@ -40,12 +40,9 @@ Form.propTypes = {
   onSubmitHandler: PropTypes.func,
   edditAction: PropTypes.shape({
     date: PropTypes.string,
+    id:  PropTypes.string,
     range:  PropTypes.string
-  }) || PropTypes.shape({
-  date: PropTypes.string,
-  range:  PropTypes.number,
-  id:  PropTypes.string,
-})
+  })
 }
 
 export default Form;
